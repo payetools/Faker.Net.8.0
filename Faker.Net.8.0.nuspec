@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Faker.Net.8.0</id>
+    <version>1.0</version>
+    <authors>Ben Smith,Ollie Riches,Robin Michael, Steve Wilkinson</authors>
+    <owners>Ben Smith,Ollie Riches,Robin Michael</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/payetools/faker-cs</projectUrl>
+    <description>.NET 8.0-compatible C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easily generate fake data: names, addresses, phone numbers, etc.</description>
+    <summary>.NET 8.0-compatible C# port of the Ruby Faker gem (http://faker.rubyforge.org/)</summary>
+    <copyright>Ben Smith, Ollie Riches, Robin Michael 2022</copyright>
+    <tags>Faker, Testing, TDD, .Net, .Net Standard, .Net Core</tags>
+    <dependencies>
+      <group targetFramework="net8.0">
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="src\Faker.Net.8.0\bin\Release\net8.0\de-DE\Faker.Net.8.0.resources.dll" target="lib\net80\de-DE\Faker.Net.8.0.resources.dll" />
+    <file src="src\Faker.Net.8.0\bin\Release\net8.0\Faker.Net.8.0.dll" target="lib\net80\Faker.Net.8.0.dll" />
+  </files>
+</package>

@@ -1,0 +1,88 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+using Faker.Extensions;
+
+namespace Faker
+{
+    public static class Internet
+    {
+        private static readonly IEnumerable<Func<string>> UserNameFormats = new List<Func<string>>
+        {
+            () => Name.First()
+                .AlphanumericOnly()
+                .ToLowerInvariant(),
+            () => $"{Name.First().AlphanumericOnly()}{new[] {".", "_"}.Random()}{Name.Last().AlphanumericOnly()}"
+                .ToLowerInvariant()
+        };
+
+        public static string Email()
+        {
+            return $"{UserName()}@{DomainName()}";
+        }
+
+        public static string Email(string name)
+        {
+            return $"{UserName(name)}@{DomainName()}";
+        }
+
+        public static string FreeEmail()
+        {
+            return $"{UserName()}@{Resources.Internet.FreeMail.Split(Config.Separator).Random()}";
+        }
+
+        public static string UserName()
+        {
+            return UserNameFormats.Random();
+        }
+
+        public static string UserName(string name)
+        {
+            return Regex.Replace(name, @"[^\w]+", x => new[] {".", "_"}.Random(), RegexOptions.Compiled)
+                .ToLowerInvariant();
+        }
+
+        public static string DomainName()
+        {
+            return $"{DomainWord()}.{DomainSuffix()}";
+        }
+
+        public static string Url()
+        {
+            var subDomain = Resources.Internet.SubDomain.Split(Config.Separator)
+                .Random();
+            var page = Resources.Internet.Page.Split(Config.Separator)
+                .Random();
+            var pageSuffix = Resources.Internet.PageSuffix.Split(Config.Separator)
+                .Random();
+            return $"http://www.{DomainName()}/{subDomain}/{page}.{pageSuffix}";
+        }
+
+        public static string SecureUrl()
+        {
+            var subDomain = Resources.Internet.SubDomain.Split(Config.Separator)
+                .Random();
+            var page = Resources.Internet.Page.Split(Config.Separator)
+                .Random();
+            var pageSuffix = Resources.Internet.PageSuffix.Split(Config.Separator)
+                .Random();
+            return $"https://www.{DomainName()}/{subDomain}/{page}.{pageSuffix}";
+        }
+
+        public static string DomainWord()
+        {
+            return Company.Name()
+                .Split(' ')
+                .First()
+                .AlphanumericOnly()
+                .ToLowerInvariant();
+        }
+
+        public static string DomainSuffix()
+        {
+            return Resources.Internet.DomainSuffix.Split(Config.Separator)
+                .Random();
+        }
+    }
+}

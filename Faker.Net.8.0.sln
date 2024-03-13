@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{190F9160-395D-4CEF-BEEE-805099D7E2E0}"
+	ProjectSection(SolutionItems) = preProject
+		src\Faker\Properties\AssemblyInfo.cs = src\Faker\Properties\AssemblyInfo.cs
+		src\Faker\Properties\SharedAssemblyInfo.cs = src\Faker\Properties\SharedAssemblyInfo.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuGet", "nuGet", "{513FC2C7-5B17-43BC-BAFD-4FC820800E33}"
+	ProjectSection(SolutionItems) = preProject
+		Faker.Net.8.0.nuspec = Faker.Net.8.0.nuspec
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Faker.Net.8.0", "src\Faker.Net.8.0\Faker.Net.8.0.csproj", "{BB247A01-E404-492F-B07C-DF92B2A1CA98}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Faker.Tests.Net.8.0", "tests\Faker.Tests.Net.8.0\Faker.Tests.Net.8.0.csproj", "{A8C66567-DD75-45DB-A7F9-14BD16D65BC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB247A01-E404-492F-B07C-DF92B2A1CA98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB247A01-E404-492F-B07C-DF92B2A1CA98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB247A01-E404-492F-B07C-DF92B2A1CA98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB247A01-E404-492F-B07C-DF92B2A1CA98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C66567-DD75-45DB-A7F9-14BD16D65BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C66567-DD75-45DB-A7F9-14BD16D65BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C66567-DD75-45DB-A7F9-14BD16D65BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C66567-DD75-45DB-A7F9-14BD16D65BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8DFC42C-B0BF-4EC1-852D-CD82AE728643}
+	EndGlobalSection
+EndGlobal
