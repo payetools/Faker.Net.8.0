@@ -1,12 +1,6 @@
-# Faker
+# Faker.Net.8.0
 
-[![NuGet](https://img.shields.io/nuget/v/faker.net.svg)](https://www.nuget.org/packages/faker.net)
-[![Build status](https://ci.appveyor.com/api/projects/status/uy628dn0tfl0triy?svg=true)](https://ci.appveyor.com/project/oriches/faker-cs)
-[![FuGet](https://www.fuget.org/packages/Faker.Net/badge.svg)](https://www.fuget.org/packages/Faker.Net/badge.svg)
-
-Codebase is built with AppVeyor and manually deployed to the offical nuGet feed from there.
-
-C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easily generate fake data:
+.NET 8.0-compatible C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easily generate fake data:
 
 	addresses (UK, US),
 	boolean,
@@ -21,11 +15,13 @@ C# port of the Ruby Faker gem (http://faker.rubyforge.org/) and is used to easil
 	names,
 	phone numbers
 
-Available as a NuGet package (https://nuget.org/packages/Faker.Net).
+Available as a NuGet package (https://nuget.org/packages/Faker.Net.8.0).
 
 Get the code via git:
 
-    git clone git://github.com/slashdotdash/faker-cs.git
+    git clone git://github.com/payetools/faker-cs-8-0.git
+
+(The original faker-cs repo is at git://github.com/oriches/faker-cs but that repo only supports .NET versions up to .NET 6.0)
 
 Example code 
 ```CSharp
@@ -53,25 +49,4 @@ var ukNhsFormatted = Faker.Identification.UkNhsNumber(true); // 658 416 8301
 var bulgarianPin = Faker.Identification.BulgarianPin(); //6402142606
 ```
 
-Supported versions:
-
-	.NET framework 4.5,
-	.NET framework 4.6,
-	.NET framework 4.7,
-	.NET framework 4.8,
-	.NET Standard 2.0,
-	.NET Standard 2.1,
-	.NET Core 3.0,
-	.NET Core 3.1,
-	.NET 5.0,
-	.NET 6.0
-
-No longer supported in nuGet package (1.1 going forward):
-
-	.NET framework 3.5 SP1,
-	.NET framework 4.0,
-	Silverlight 3.0,
-	Silverlight 4.0,
-	Silverlight 5.0,
-	Windows Phone 7,
-	Windows Phone 7.1
+Supported .NET versions:	.NET 8.0 only
